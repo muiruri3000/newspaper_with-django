@@ -25,7 +25,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           {% if user.is_authenticated %}
-          <li><a href="#" class="nav-link px-2 link-dark">+ New</a></li>
+          <li><a href="{% url 'article_new'}" class="nav-link px-2 link-dark">+ New</a></li>
         </ul>   
         <div class="mr-auto">
           <ul class="navbar-nav">
@@ -44,13 +44,16 @@
                   <form method="post" action="{% url 'logout' %}" 
                     style="display:inline;">
                     {% csrf_token %}
+                        
                     <button type="submit" class="btn btn-link nav-link"
                       style="display:inline; cursor:pointer;">Logout</button>
                   </form>
                 </li>
               </ul>
             </li>
+        
             {% else %}
+            
           </ul>
         </div>
         <div class="mr-auto">
@@ -63,9 +66,11 @@
       </div>
     </div>
   </nav>
+  asasasasa
   <main>
     <div class="container">
       {% block content %}
+      
       {% endblock content %}
     </div>
   </main>
