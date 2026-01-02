@@ -35,7 +35,7 @@ DEBUG = env.bool("DEBUG", default=False)
 #     "127.0.0.1",
 #     "localhost",
 # ]
-CSRF_TRUSTED_ORIGINS = ["https://newspaper-with-django.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://newspaper-with-django-4.onrender.com"]
 # Application definition
 
 INSTALLED_APPS = [
