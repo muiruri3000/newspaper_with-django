@@ -30,7 +30,11 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = env.bool("DEBUG", default=False)
 
 # ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
-ALLOWED_HOSTS = ["https://newspaper-with-django.onrender.com", "127.0.0.1", "localhost"]
+# ALLOWED_HOSTS = [
+#     "https://newspaper-with-django-4.onrender.com",
+#     "127.0.0.1",
+#     "localhost",
+# ]
 CSRF_TRUSTED_ORIGINS = ["https://newspaper-with-django.onrender.com"]
 # Application definition
 
