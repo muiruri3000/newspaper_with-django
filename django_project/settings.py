@@ -15,7 +15,9 @@ from environs import Env
 
 env = Env()
 env.read_env()
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
+ALLOWED_HOSTS = env.list(
+    "ALLOWED_HOSTS", default=["localhost", "127.0.0.1", ".onrender.com"]
+)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,7 +37,7 @@ DEBUG = env.bool("DEBUG", default=False)
 #     "127.0.0.1",
 #     "localhost",
 # ]
-CSRF_TRUSTED_ORIGINS = ["https://newspaper-with-django-4.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com"]
 # Application definition
 
 INSTALLED_APPS = [
