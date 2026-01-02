@@ -3,6 +3,9 @@
 
 
 {%block content%}
+
+<p>URL test: {% url 'article_new' %}</p>
+
 <h1>New Article </h1>
 <form method="post" action="{% url 'article_new' %}">{%csrf_token%}
 {{form | crispy}}
